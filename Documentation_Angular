@@ -1,0 +1,23 @@
+// FOR VS CODE
+cntrl+` = Shortcut for terminal.
+file -> preferneces -> user settings = update anything you want in it , usign a json structure.
+Augury = chrome extension to check state and everything on angular apps. 
+ng new {{AppName}}
+ng g component {{component name}}
+ng help
+disable adding a file
+ng g c components/users --spec=false
+//angular
+
+An interface acts like a model. Basically shows how your user model should look like
+NgOnIt is a life cycle method , which runs everytime the app is loaded. 
+In the interface , adding ? behind any varible makes it optional
+firstName
+lastName
+age?
+street?
+
+//Installation
+npm i bootstrap@4.0.0-beta.2 jquery popper.js
+Then go inside angular-cli.json or angular.json go to styles for boostrap and script for js files
+for boosstrap type ../node_modules/bootstrap/dist/css/bootstrap.css
