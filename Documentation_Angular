@@ -6,9 +6,10 @@ ng new {{AppName}}
 ng g component {{component name}}
 ng help
 disable adding a file
-ng g c components/users --spec=false
-//angular
 
+//angular
+ ng g s service/data --module=app.module
+ ng g c components/users --spec=false
 An interface acts like a model. Basically shows how your user model should look like
 NgOnIt is a life cycle method , which runs everytime the app is loaded. 
 In the interface , adding ? behind any varible makes it optional
@@ -16,8 +17,30 @@ firstName
 lastName
 age?
 street?
+[] , bind from component to template
+() , bind from event to compoent 
+[(ngModel)]
+
+//Failed to set attribute error comes inside html tags , when there is a extra character like ; 2 or anything
 
 //Installation
 npm i bootstrap@4.0.0-beta.2 jquery popper.js
 Then go inside angular-cli.json or angular.json go to styles for boostrap and script for js files
 for boosstrap type ../node_modules/bootstrap/dist/css/bootstrap.css
+        Jquery:    "node_modules/jquery/dist/jquery.js",
+        Popper.js: "node_modules/popper.js/dist/umd/popper.js",
+        bootstrap: javascript "node_modules/bootstrap/dist/js/bootstrap.js"
+
+//Events
+(click),only if left side of mouse is clicked
+(mouseover)
+mousedown , if any mouse button is clicked.
+mouseup, once you leave the click the event is fired.
+dblclicl , double click
+drag, drag the element.
+drag over , everytime the held element is dragged over something. 
+
+keydown , everythime you type.
+keyup , when you release a key.
+focus , when you click on the inout field.
+
