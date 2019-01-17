@@ -9,10 +9,23 @@ import { UserComponent } from "./components/user/user.component";
 import { UsersComponent } from "./components/users/users.component";
 import { NavbarComponent } from "./components/navbar/navbar.component";
 
+import { UserService } from "../app/services/user.service";
+import { PostService } from "../app/services/post.service";
+import { PostComponent } from "./components/post/post.component";
+import { HttpClientModule } from "@angular/common/http";
+import { PostFormComponent } from './components/post-form/post-form.component';
+
 @NgModule({
-  declarations: [AppComponent, UserComponent, UsersComponent, NavbarComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule  ],
-  providers: [],
+  declarations: [
+    AppComponent,
+    UserComponent,
+    UsersComponent,
+    NavbarComponent,
+    PostComponent,
+    PostFormComponent
+  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+  providers: [UserService, PostService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

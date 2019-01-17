@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
 import { User } from "../../models/User";
-import { DataService } from "../../services/data.service";
+import { UserService } from "../../services/user.service";
 import { Observable } from "rxjs";
 
 @Component({
@@ -15,7 +15,7 @@ export class UsersComponent implements OnInit {
     email: ""
   };
   users: User[];
-  constructor(private dataService: DataService) {
+  constructor(private userService: UserService) {
     this.setCurrentClasses();
     this.setCurrentStyles();
   }
@@ -28,11 +28,11 @@ export class UsersComponent implements OnInit {
   @ViewChild("userForm") form: any;
 
   ngOnInit() {
-    this.dataService.getData().subscribe(data => {
+    this.userService.getData().subscribe(data => {
       this.data = data;
       console.log(this.data);
     });
-    this.dataService.getUsers().subscribe(users => {
+    this.userService.getUsers().subscribe(users => {
       this.users = users;
     });
   }
@@ -43,7 +43,7 @@ export class UsersComponent implements OnInit {
     if (!valid) {
       console.log("Form not valid");
     } else {
-      this.dataService.addUser(value);
+      this.userService.addUser(value);
       this.form.reset();
     }
   }
