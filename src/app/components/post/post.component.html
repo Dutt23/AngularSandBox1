@@ -1,26 +1,8 @@
-<app-post-form
-  [currentPost]="currentPost"
-  [isEdit]="isEdit"
-  (newPost)="onNewPost($event)"
-  (updatedPost)="onUpdatedPost($event)"
-></app-post-form>
-<h2>Posts</h2>
-<div class="card mb-3" *ngFor="let post of posts">
+<a routerLink="/posts" class="btn btn-light btn-sm mb-3">Back</a>
+
+<div *ngIf="post" class="card">
   <div class="card-body">
     <h3>{{ post.title }}</h3>
     <p>{{ post.body }}</p>
-    <button (click)="deletePost(post)" class="btn btn-danger">
-      <i class="fa fa-remove"></i>
-    </button>
-    <button
-      *ngIf="!post.editing"
-      (click)="editPost(post)"
-      class="btn btn-light"
-    >
-      <i class="fa fa-pencil"></i>
-    </button>
-    <button *ngIf="post.editing" (click)="editPost(post)" class="btn btn-light">
-      <i class="fa fa-edit"></i>
-    </button>
   </div>
 </div>

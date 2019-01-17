@@ -10,6 +10,7 @@ disable adding a file
 //angular
  ng g s service/data --module=app.module
  ng g c components/users --spec=false
+ ng n m app-routing --flat -module=app.module
 An interface acts like a model. Basically shows how your user model should look like
 NgOnIt is a life cycle method , which runs everytime the app is loaded. 
 In the interface , adding ? behind any varible makes it optional
@@ -20,6 +21,9 @@ street?
 [] , bind from component to template
 () , bind from event to compoent 
 [(ngModel)]
+
+() => @Ouput
+[] => Input
 
 //Failed to set attribute error comes inside html tags , when there is a extra character like ; 2 or anything
 
